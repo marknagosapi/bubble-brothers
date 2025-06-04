@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/e484f06f-ba77-4a09-8123-d4d7f24f7ddd.png" 
+                src="/bubble-brothers/lovable-uploads/e484f06f-ba77-4a09-8123-d4d7f24f7ddd.png" 
                 alt="Bubble Brothers Logo" 
                 className="h-12 w-auto"
               />
