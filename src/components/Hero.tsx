@@ -58,7 +58,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-8 animate-scale-in">
             <img 
-              src="/bubble-brothers/lovable-uploads/e484f06f-ba77-4a09-8123-d4d7f24f7ddd.png" 
+              src="https://www.bubblebrothers.fun/lovable-uploads/e484f06f-ba77-4a09-8123-d4d7f24f7ddd.png" 
               alt="Bubble Brothers Logo" 
               className="h-40 md:h-48 w-auto mx-auto hover:scale-110 transition-transform duration-300"
             />
