@@ -20,6 +20,8 @@ export const enTranslations = {
   'aboutus.names': 'Márk & Ádám',
   'aboutus.description': 'We are both programmers, but we wanted to create something new and entertaining in Târgu Mureș. This is how Bubble Brothers was born - where coding was replaced with rolling in bubbles and laughter!',
   'aboutus.mission': 'Our mission is simple: to bring fun and joy into people\'s lives while having a great time ourselves. Because if we sit in front of screens all day as programmers, at least on weekends we can bounce around in bubbles!',
+  'aboutus.action': 'In Action!',
+  'aboutus.action.desc': 'Some moments from the bubble football field',
   
   // About
   'about.title': 'Why Choose Us?',
@@ -65,11 +67,18 @@ export const enTranslations = {
   'contact.email': 'Email',
   'contact.coverage': 'Coverage Area',
   'contact.coverage.desc': 'Târgu Mureș and surroundings',
+  'contact.cui': 'CUI Number',
   'contact.quick': 'Quick Actions',
   'contact.call': 'Call Now',
   'contact.whatsapp': 'WhatsApp',
   'contact.send_email': 'Send Email',
   
   // Footer
-  'footer.text': 'Bubble Brothers - Where fun meets sport!'
+  'footer.text': 'Bubble Brothers - Where fun meets sport!',
+  'footer.contact': 'Contact Info',
+  'footer.quicklinks': 'Quick Links',
+  'footer.backtotop': 'Back to Top',
+  'footer.copyright': 'All rights reserved.',
+  'footer.madewith': 'Made with',
+  'footer.madewith.for': 'for bubble football enthusiasts'
 };

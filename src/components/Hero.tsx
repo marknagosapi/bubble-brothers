@@ -1,5 +1,4 @@
-
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -14,16 +13,12 @@ const Hero = () => {
   const { t } = useLanguage();
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const scrollToContact = useCallback(() => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
 
   useEffect(() => {
-    // Load YouTube iframe API
-    if (!window.YT) {
+    if (!window.YT && !document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
       const script = document.createElement('script');
       script.src = 'https://www.youtube.com/iframe_api';
       document.head.appendChild(script);
@@ -33,22 +28,20 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* YouTube Video Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <iframe
           ref={iframeRef}
           src="https://www.youtube.com/embed/m7iwDxraEb0?autoplay=1&mute=1&loop=1&playlist=m7iwDxraEb0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&fs=0&cc_load_policy=0&start=0&end=0"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          className="w-full h-full object-cover pointer-events-none"
+          className="absolute top-1/2 left-1/2 w-full h-full pointer-events-none border-0"
           style={{
-            width: '120vw',
-            height: '120vh',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
+            minWidth: '100vw',
+            minHeight: '100vh',
+            width: 'calc(100vh * (16/9))',
+            height: 'calc(100vw * (9/16))',
             transform: 'translate(-50%, -50%)',
-            border: 'none',
-            pointerEvents: 'none'
+            objectFit: 'cover'
           }}
         />
         <div className="absolute inset-0 bg-black/40"></div>
@@ -67,7 +60,7 @@ const Hero = () => {
             <img 
               src="/bubble-brothers/lovable-uploads/e484f06f-ba77-4a09-8123-d4d7f24f7ddd.png" 
               alt="Bubble Brothers Logo" 
-              className="h-32 w-auto mx-auto hover:scale-110 transition-transform duration-300"
+              className="h-40 md:h-48 w-auto mx-auto hover:scale-110 transition-transform duration-300"
             />
           </div>
 

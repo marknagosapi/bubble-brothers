@@ -9,7 +9,7 @@ export const huTranslations = {
   
   // Hero
   'hero.title': 'Bubble Brothers',
-  'hero.subtitle': 'Hagyd, hogy elkezdődjön a móka!',
+  'hero.subtitle': 'Itt kezdődik az igazi szórakozás!',
   'hero.description': 'Élvezd a bubble football izgalmát! Tökéletes csapatépítéshez, születésnapokhoz és minden alkalomhoz!',
   'hero.cta': 'Foglalj Most',
   
@@ -20,6 +20,8 @@ export const huTranslations = {
   'aboutus.names': 'Márk & Ádám',
   'aboutus.description': 'Mindketten programozók vagyunk, de szerettünk volna valami újat és szórakoztatót létrehozni Marosvásárhelyen. Így született meg a Bubble Brothers - ahol a kódolást felváltotta a buborékban való gurulás és a nevetés!',
   'aboutus.mission': 'Küldetésünk egyszerű: szórakozást és örömet hozni az emberek életébe, miközben mi magunk is remekül szórakozunk. Mert ha már programozóként egész nap a képernyő előtt ülünk, legalább hétvégén buborékokban pattoghatunk!',
+  'aboutus.action': 'Akció Közben!',
+  'aboutus.action.desc': 'Néhány pillanat a bubble football pályáról',
   
   // About
   'about.title': 'Miért válassz minket?',
@@ -65,11 +67,18 @@ export const huTranslations = {
   'contact.email': 'Email',
   'contact.coverage': 'Kiszolgálási Terület',
   'contact.coverage.desc': 'Marosvásárhely és környéke',
+  'contact.cui': 'CUI Szám',
   'contact.quick': 'Gyors Műveletek',
   'contact.call': 'Hívj Most',
   'contact.whatsapp': 'WhatsApp',
   'contact.send_email': 'Email Küldése',
   
   // Footer
-  'footer.text': 'Bubble Brothers - Ahol a móka találkozik a sporttal!'
+  'footer.text': 'Bubble Brothers - Ahol a móka találkozik a sporttal!',
+  'footer.contact': 'Kapcsolat',
+  'footer.quicklinks': 'Gyors Linkek',
+  'footer.backtotop': 'Vissza a Tetejére',
+  'footer.copyright': 'Minden jog fenntartva.',
+  'footer.madewith': 'Készítve',
+  'footer.madewith.for': 'a bubble football rajongóknak'
 };

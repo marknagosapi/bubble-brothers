@@ -20,6 +20,8 @@ export const roTranslations = {
   'aboutus.names': 'Márk & Ádám',
   'aboutus.description': 'Amândoi suntem programatori, dar am vrut să creăm ceva nou și distractiv în Târgu Mureș. Astfel s-a născut Bubble Brothers - unde programarea a fost înlocuită cu rostogolirea în bule și râsul!',
   'aboutus.mission': 'Misiunea noastră este simplă: să aducem distracție și bucurie în viața oamenilor, în timp ce și noi ne distrăm minunat. Pentru că dacă stăm toată ziua în fața ecranului ca programatori, măcar în weekend să putem sări în bule!',
+  'aboutus.action': 'În Acțiune!',
+  'aboutus.action.desc': 'Câteva momente de pe terenul de bubble football',
   
   // About
   'about.title': 'De ce să ne alegi?',
@@ -65,11 +67,18 @@ export const roTranslations = {
   'contact.email': 'Email',
   'contact.coverage': 'Zona de Acoperire',
   'contact.coverage.desc': 'Târgu Mureș și împrejurimi',
+  'contact.cui': 'CUI',
   'contact.quick': 'Acțiuni Rapide',
   'contact.call': 'Sună Acum',
   'contact.whatsapp': 'WhatsApp',
   'contact.send_email': 'Trimite Email',
   
   // Footer
-  'footer.text': 'Bubble Brothers - Unde distracția întâlnește sportul!'
+  'footer.text': 'Bubble Brothers - Unde distracția întâlnește sportul!',
+  'footer.contact': 'Contact',
+  'footer.quicklinks': 'Link-uri Rapide',
+  'footer.backtotop': 'Înapoi Sus',
+  'footer.copyright': 'Toate drepturile rezervate.',
+  'footer.madewith': 'Făcut cu',
+  'footer.madewith.for': 'pentru pasionații de bubble football'
 };

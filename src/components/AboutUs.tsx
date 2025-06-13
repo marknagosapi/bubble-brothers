@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Code, Heart, Smile } from 'lucide-react';
+import { Code, Heart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const AboutUs = () => {
@@ -21,56 +20,35 @@ const AboutUs = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-center">
           {/* Text Content */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <div className="flex items-center mb-6">
-                <Code className="h-8 w-8 text-purple-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">{t('aboutus.names')}</h3>
-              </div>
-              
-              <p className="text-lg text-gray-700 mb-6 italic">
-                {t('aboutus.intro')}
-              </p>
-              
-              <p className="text-gray-600 leading-relaxed mb-4">
-                {t('aboutus.description')}
-              </p>
-              
-              <div className="flex items-start space-x-3 bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg">
-                <Heart className="h-6 w-6 text-red-500 mt-1 flex-shrink-0" />
-                <p className="text-gray-700 leading-relaxed">
-                  {t('aboutus.mission')}
-                </p>
-              </div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
+            <div className="flex items-center mb-6">
+              <Code className="h-8 w-8 text-purple-600 mr-3" />
+              <h3 className="text-2xl font-bold text-gray-900">{t('aboutus.names')}</h3>
             </div>
-
-            {/* Fun Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                <Code className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-                <p className="text-sm font-semibold text-gray-900">Programozók</p>
-                <p className="text-xs text-gray-600">Nap közben</p>
-              </div>
-              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                <Smile className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <p className="text-sm font-semibold text-gray-900">Szórakoztatók</p>
-                <p className="text-xs text-gray-600">Hétvégén</p>
-              </div>
-              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                <Heart className="h-8 w-8 text-red-500 mx-auto mb-2" />
-                <p className="text-sm font-semibold text-gray-900">Barátok</p>
-                <p className="text-xs text-gray-600">Mindig</p>
-              </div>
+            
+            <p className="text-lg text-gray-700 mb-6 italic">
+              {t('aboutus.intro')}
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed mb-6">
+              {t('aboutus.description')}
+            </p>
+            
+            <div className="flex items-start space-x-3 bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg">
+              <Heart className="h-6 w-6 text-red-500 mt-1 flex-shrink-0" />
+              <p className="text-gray-700 leading-relaxed">
+                {t('aboutus.mission')}
+              </p>
             </div>
           </div>
 
           {/* Image */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+          <div className="relative h-full">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl h-full min-h-[500px]">
               <img 
                 src="/bubble-brothers/lovable-uploads/c41a70c5-d952-44da-be8d-f4fdc60cf3a8.png"
                 alt="Bubble Brothers - Márk & Ádám"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent"></div>
               
@@ -92,10 +70,10 @@ const AboutUs = () => {
         </div>
 
         {/* Action Photos Grid */}
-        <div className="mt-20">
+        <div id="gallery" className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Akció Közben!</h3>
-            <p className="text-lg text-gray-600">Néhány pillanat a bubble football pályáról</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">{t('aboutus.action')}</h3>
+            <p className="text-lg text-gray-600">{t('aboutus.action.desc')}</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">

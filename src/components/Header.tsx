@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -14,16 +13,13 @@ const Header = () => {
     { code: 'en', name: 'English', flag: '🇬🇧' }
   ];
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToSection = useCallback((sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
-  };
+  }, []);
 
   return (
-    <header className="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
+    <header className="backdrop-blur-md shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -47,7 +43,7 @@ const Header = () => {
               {t('nav.home')}
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection('aboutus')}
               className="hover:text-blue-600 transition-colors font-medium"
             >
               {t('nav.about')}
@@ -84,7 +80,7 @@ const Header = () => {
               </button>
               
               {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
+                <div className="absolute right-0 mt-2 w-48 rounded-lg shadow-lg border z-50">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}

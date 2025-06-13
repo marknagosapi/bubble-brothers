@@ -1,12 +1,11 @@
-
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Users, UserCheck, UsersRound, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Services = () => {
   const { t } = useLanguage();
 
-  const packages = [
+  const packages = useMemo(() => [
     {
       icon: Users,
       title: t('services.small.title'),
@@ -31,14 +30,11 @@ const Services = () => {
       size: '50+',
       image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80'
     }
-  ];
+  ], [t]);
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const scrollToContact = useCallback(() => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
 
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">

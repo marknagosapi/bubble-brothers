@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -10,50 +9,46 @@ const Gallery = () => {
   // Placeholder images - you can replace these with actual bubble football photos
   const galleryImages = [
     {
-      src: "/bubble-brothers/lovable-uploads/c74f7fab-2692-47d2-b05f-62b727143562.png",
+      src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
       alt: 'Bubble Football Action 1'
     },
     {
-      src: "/bubble-brothers/lovable-uploads/26880bd0-fafc-49f8-9a9a-c017df05bbf0.png",
+      src: 'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=800&q=80',
       alt: 'Bubble Football Action 2'
     },
     {
-      src: "/bubble-brothers/lovable-uploads/43aa560b-3a8e-4f76-98c4-9dbabf7c50c8.png",
+      src: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80',
       alt: 'Bubble Football Action 3'
     },
     {
-      src: "/bubble-brothers/lovable-uploads/21315e67-c795-4758-a524-2651c81a4989.png",
+      src: 'https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=800&q=80',
       alt: 'Bubble Football Action 4'
     },
     {
-      src: "/bubble-brothers/lovable-uploads/83892447-41d5-4770-a30b-c939bc035dac.png",
+      src: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80',
       alt: 'Bubble Football Action 5'
     },
     {
-      src : "/bubble-brothers/lovable-uploads/8813d28a-b2c2-4c5c-b390-4c159d8eebc2.png",
+      src: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80',
       alt: 'Bubble Football Action 6'
     }
   ];
 
-  const openLightbox = (index: number) => {
+  const openLightbox = useCallback((index: number) => {
     setSelectedImage(index);
-  };
+  }, []);
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setSelectedImage(null);
-  };
+  }, []);
 
-  const nextImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % galleryImages.length);
-    }
-  };
+  const nextImage = useCallback(() => {
+    setSelectedImage((prev) => (prev !== null ? (prev + 1) % galleryImages.length : null));
+  }, [galleryImages]);
 
-  const prevImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1);
-    }
-  };
+  const prevImage = useCallback(() => {
+    setSelectedImage((prev) => (prev !== null ? (prev === 0 ? galleryImages.length - 1 : prev - 1) : null));
+  }, [galleryImages]);
 
   return (
     <section id="gallery" className="py-20 bg-white">
@@ -94,6 +89,7 @@ const Gallery = () => {
         <div className="mt-12 text-center">
           <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 border-2 border-dashed border-blue-200">
             <h3 className="text-xl font-bold text-gray-700 mb-2">More Photos Coming Soon!</h3>
+            <p className="text-gray-600">We're constantly adding new photos from our exciting bubble football events.</p>
           </div>
         </div>
       </div>
