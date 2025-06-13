@@ -46,7 +46,7 @@ const AboutUs = () => {
           <div className="relative h-full">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl h-full min-h-[500px]">
               <img 
-                src="/bubble-brothers/lovable-uploads/c41a70c5-d952-44da-be8d-f4fdc60cf3a8.png"
+                src="/lovable-uploads/c41a70c5-d952-44da-be8d-f4fdc60cf3a8.png"
                 alt="Bubble Brothers - Márk & Ádám"
                 className="w-full h-full object-contain"
               />
@@ -79,7 +79,7 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             <div className="relative overflow-hidden rounded-xl shadow-lg group">
               <img 
-                src="/bubble-brothers/lovable-uploads/c74f7fab-2692-47d2-b05f-62b727143562.png"
+                src="/lovable-uploads/c74f7fab-2692-47d2-b05f-62b727143562.png"
                 alt="Bubble football játék"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -88,7 +88,7 @@ const AboutUs = () => {
             
             <div className="relative overflow-hidden rounded-xl shadow-lg group">
               <img 
-                src="/bubble-brothers/lovable-uploads/26880bd0-fafc-49f8-9a9a-c017df05bbf0.png"
+                src="/lovable-uploads/26880bd0-fafc-49f8-9a9a-c017df05bbf0.png"
                 alt="Bubble football ütközés"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -97,7 +97,7 @@ const AboutUs = () => {
             
             <div className="relative overflow-hidden rounded-xl shadow-lg group">
               <img 
-                src="/bubble-brothers/lovable-uploads/43aa560b-3a8e-4f76-98c4-9dbabf7c50c8.png"
+                src="/lovable-uploads/43aa560b-3a8e-4f76-98c4-9dbabf7c50c8.png"
                 alt="Csapat játék"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -106,7 +106,7 @@ const AboutUs = () => {
             
             <div className="relative overflow-hidden rounded-xl shadow-lg group">
               <img 
-                src="/bubble-brothers/lovable-uploads/21315e67-c795-4758-a524-2651c81a4989.png"
+                src="/lovable-uploads/21315e67-c795-4758-a524-2651c81a4989.png"
                 alt="Foci akció"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -115,7 +115,7 @@ const AboutUs = () => {
             
             <div className="relative overflow-hidden rounded-xl shadow-lg group">
               <img 
-                src="/bubble-brothers/lovable-uploads/83892447-41d5-4770-a30b-c939bc035dac.png"
+                src="/lovable-uploads/83892447-41d5-4770-a30b-c939bc035dac.png"
                 alt="Góró a földön"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -124,7 +124,7 @@ const AboutUs = () => {
             
             <div className="relative overflow-hidden rounded-xl shadow-lg group">
               <img 
-                src="/bubble-brothers/lovable-uploads/8813d28a-b2c2-4c5c-b390-4c159d8eebc2.png"
+                src="/lovable-uploads/8813d28a-b2c2-4c5c-b390-4c159d8eebc2.png"
                 alt="Bubble brothers csapat"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
